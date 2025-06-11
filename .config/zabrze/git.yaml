@@ -1,5 +1,6 @@
 contexts:
   - &git ^git\s
+  - &gh ^gh\s
 
 abbrevs:
   ##############################
@@ -8,3 +9,160 @@ abbrevs:
   - name: git
     abbr: g
     snippet: git
+
+  - name: add
+    abbr: a
+    snippet: add .
+    global: true
+    context: *git
+
+  - name: branch
+    abbr: b
+    snippet: branch
+    global: true
+    context: *git
+
+  - name: branch rename
+    abbr: bm
+    snippet: branch -m
+    global: true
+    context: *git
+
+  - name: commit
+    abbr: c
+    snippet: commit
+    global: true
+    context: *git
+
+  - name: commit with message
+    abbr: cm
+    snippet: commit -m
+    global: true
+    context: *git
+
+  - name: commit allow empty
+    abbr: cae
+    snippet: commit --allow-empty -m '{}'
+    global: true
+    context: *git
+
+  - name: commit amend no edit
+    abbr: can
+    snippet: commit --amend --no-edit
+    global: true
+    context: *git
+
+  - name: fetch
+    abbr: f
+    snippet: fetch
+    global: true
+    context: *git
+
+  - name: log
+    abbr: l
+    snippet: log
+    global: true
+    context: *git
+
+  - name: log oneline
+    abbr: lo
+    snippet: log --oneline -n 10
+    global: true
+    context: *git
+
+  - name: pull
+    abbr: pl
+    snippet: pull origin
+    global: true
+    context: *git
+
+  - name: push
+    abbr: ph
+    snippet: push origin HEAD
+    global: true
+    context: *git
+
+  - name: reset soft
+    abbr: rs
+    snippet: reset --soft
+    global: true
+    context: *git
+
+  - name: rebase continue
+    abbr: rec
+    snippet: rebase --continue
+    global: true
+    context: *git
+
+  - name: rebase interactive
+    abbr: rei
+    snippet: rebase -i
+    global: true
+    context: *git
+
+  - name: revert merge commit
+    abbr: rvm
+    snippet: revert -m 1
+    global: true
+    context: *git
+
+  - name: switch
+    abbr: s
+    snippet: switch
+    global: true
+    context: *git
+
+  - name: switch to new branch
+    abbr: sc
+    snippet: switch -c
+    global: true
+    context: *git
+
+  - name: stash pop
+    abbr: stp
+    snippet: stash pop
+    global: true
+    context: *git
+
+  - name: stash with message
+    abbr: sts
+    snippet: stash save -u '{}'
+    global: true
+    context: *git
+
+  ##############################
+  #####         gh         #####
+  ##############################
+  - name: browse
+    abbr: b
+    snippet: browse
+    global: true
+    context: *gh
+
+  - name: switch to PR
+    abbr: pch
+    snippet: pr checkout
+    global: true
+    context: *gh
+
+  - name: create PR on web
+    abbr: pcr
+    snippet: pr create --head --web
+    global: true
+    context: *gh
+
+  ##############################
+  #####        util        #####
+  ##############################
+  - name: branch name
+    abbr: _b
+    snippet: $(git symbolic-ref --short HEAD)
+    global: true
+    context: *git
+    evaluate: true
+
+  - name: HEAD
+    abbr: H
+    snippet: HEAD
+    global: true
+    context: *git
