@@ -1,0 +1,20 @@
+abbrevs:
+  - name: pipe to fzf
+    abbr: ff
+    snippet: "| fzf -1 +m"
+    global: true
+
+  - name: ghq cd
+    abbr: gd
+    snippet: cd "$(ghq root)/$(ghq list -p | fzf -1 +m)"
+    evaluate: true
+
+  - name: help
+    abbr: hh
+    snippet: --help
+    global: true
+
+  - name: pipe to rg
+    abbr: rr
+    snippet: "| rg -n"
+    global: true
