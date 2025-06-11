@@ -1,0 +1,10 @@
+contexts:
+  - &git ^git\s
+
+abbrevs:
+  ##############################
+  #####        git         #####
+  ##############################
+  - name: git
+    abbr: g
+    snippet: git
